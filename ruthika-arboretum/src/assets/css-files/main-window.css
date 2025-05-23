@@ -1,0 +1,247 @@
+.wind{
+    width: 92vw;
+    height: 70vh;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #f434a1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-items: center;
+  }
+
+/* middle text */
+
+
+.ptext{
+    /* margin-top: 10vh; */
+    position: absolute;
+    /* top: 40%; */
+    /* margin: auto; */
+    justify-self: center;
+    align-self: center;
+    /* padding: 0; */
+    vertical-align: middle;
+    left: 40%;
+    font-family: 'Shippori Mincho';
+    font-size: 80px;
+    text-shadow: #00ffe1 4px 4px 10px,0 0 1em #00ffe1cf, 0 0 0.2em #00ffe1e5;
+    z-index: 2;
+    animation: tglow 1s linear infinite;
+  }
+    
+
+
+/*tree*/
+
+.pstree{
+    position: absolute;
+    width: 83.53h;
+    height: 80vh;
+    margin-top: -8vh;
+    z-index: 1;
+  }
+
+.le{
+    margin-left: -38.8vh;
+  }
+
+.horizontal-spin{
+    transform: scaleX(-1);
+  }
+  
+.vertical-spin{
+    transform: scaleY(-1);
+    transform: scaleX(-1);
+}
+.out{
+    margin-left: -41.8vh;
+    top: -0.1vh;
+  }
+
+.in{
+    right: -41.8vh;
+    top: -0.1vh;
+  }
+
+.mid-tree{
+    height: 77vh;
+    width: 48.53vh;
+    --width: 52.53vh;
+    margin-top: -4vh;
+    left: calc(50% - (var(--width)/2));
+    z-index: 0;
+}
+
+.mh{
+    width: 42.67vh;
+    height: 42.67vh;
+    position: absolute;
+    top: -18vh;
+    right: 5vh;
+    border-radius: 50%;
+    background: radial-gradient(#00ffe1 0%,#00ffe13f 15%,#00ffe129 30%,#00ffe100 100%);
+    filter: blur(50px);
+    z-index: -1;
+    animation: moon_rad 1s linear 1s infinite;
+  }
+
+  .moon{
+    width: 10.67vh;
+    height: 10.67vh;
+    position: absolute;
+    right: 21vh;
+    filter: blur(1px);
+    top: -2vh;
+    z-index: 0;
+  }
+
+.ri{
+    right: -35.8vh;
+  }
+
+  
+  .fts{
+    position: absolute;
+    width: 144vh;
+    height: 52.96vh;
+    margin-top: calc(95vh - 52.96vh);
+    margin-left: -28vh;
+    z-index: 1;
+  }
+
+/* birdssss */
+.gf{
+    width: 6.49vh;
+    height: 6.84vh;
+    transform: rotate(10deg);
+  }
+
+.gft{
+    width: 6.49vh;
+    height: 6.84vh;
+    transform: rotate(10deg);
+    animation-duration: 0.5ms;
+    top: 4vh;
+  }
+
+  .bird-container{
+    position: absolute;
+    margin-top: 17vh;
+    margin-left: 32vh;
+    transform: rotate(-5deg);
+  }
+  .bird{
+    position: relative;
+    
+  }
+  
+  /* .marg{ 
+    width: 3.49vh;
+    height: 3.84vh;
+    top: -5vh;
+    left: 8vh;
+    width: 5vh;
+  } */
+  .marge{
+    width: 3.49vh;
+    height: 3.84vh;
+    top: 2vh;
+    left: 12vh;
+    width: 5vh;
+    animation: bird_fly 2s linear 1s infinite;
+  }
+
+/* monkey */ 
+.monkey{
+    position: absolute;
+    width: 16vh;
+    height: 16vh;
+    margin-top: 27vh;
+    margin-left: 20vh;
+    transform-origin: 0% 0%;
+    rotate: -25deg;
+  }
+
+.landan{
+  position: absolute;
+  width: 16.93vh;
+  height: 18.67vh;
+  margin-top: 48vh;
+  margin-left: 11vh;
+}
+.rid{
+  left: 22vh;
+}
+.elk{
+    position: absolute;
+    right: 28vh;
+  }
+
+/*animations */
+@keyframes tglow {
+    0%{
+        text-shadow: #00ffe1 4px 4px 10px,0 0 1em #00ffe1cf, 0 0 0.2em #00ffe1e5;
+    }
+    50%{
+        text-shadow: #00ffe1 6px 6px 15px,0 0 1em #00ffe1cf, 0 0 0.2em #00ffe1e5;
+    }
+    100%{
+        text-shadow: #00ffe1 4px 4px 10px,0 0 1em #00ffe1cf, 0 0 0.2em #00ffe1e5;
+    }
+  }
+@keyframes bord_spin {
+    0%{
+        --bord-turn: 0turn;
+    }
+    100%{
+        --bord-turn: 1turn;
+    }
+}
+@keyframes moon_rad {
+    0%{
+        width: 42.67vh;
+        height: 42.67vh;
+    }
+    50%{
+        top: -23vh;
+        right: 0vh;
+        width: 52.67vh;
+        height: 52.67vh;
+    }
+    100%{
+        width: 42.67vh;
+        height: 42.67vh;
+    }
+}
+@keyframes bird_fly {
+    0%{
+        transform: translate(10px, 40%);
+    }
+    100%{
+        transform: translate(50px, 70%);
+    }
+}
+
+@property --bord-turn{
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+  /* .marget{
+    width: 3.49vh;
+    height: 3.84vh;
+    top: -8vh; 
+    left: 17vh;
+  } */
+  /* .margete{ 
+    top: -4vh;
+    left: 23vh;
+  } */
+
+/* .trs{ 
+    opacity: 1;
+    z-index: 1;
+  } */
